@@ -18,7 +18,7 @@ class Signin extends React.Component {
   }
 
   onSubmit = () => {
-    fetch('http://localhost:8080/signin', {
+    fetch('https://hidden-cliffs-83795.herokuapp.com/signin', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -32,6 +32,7 @@ class Signin extends React.Component {
           this.props.loadUser(data);
         }
       })
+      .catch(console.log);
   }
 
   render(props) {
